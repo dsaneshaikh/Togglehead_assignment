@@ -1,0 +1,62 @@
+{
+  "carouselslides": [
+    {
+      "header": "Lorem ipsum 1",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+      "cta": "Know More",
+      "ctaicon": "/svgs/ctaicon.svg",
+      "img": "/svgs/banner.svg"
+    },
+    {
+      "header": "Lorem ipsum 2",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+      "cta": "Know More",
+      "ctaicon": "/svgs/ctaicon.svg",
+      "img": "/svgs/banner.svg"
+    },
+    {
+      "header": "Lorem ipsum 3",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+      "cta": "Know More",
+      "ctaicon": "/svgs/ctaicon.svg",
+      "img": "/svgs/banner.svg"
+    },
+    {
+      "header": "Lorem ipsum 4",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd",
+      "cta": "Know More",
+      "ctaicon": "/svgs/ctaicon.svg",
+      "img": "/svgs/banner.svg"
+    }
+  ],
+  "card": [
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    }
+  ]
+}

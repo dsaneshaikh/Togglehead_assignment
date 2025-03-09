@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Container holds both left panel and right panel */
+.upcoming-examinations-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1.5rem 7rem;
+  /* Optional bottom border to separate from next section */
+  font-family: "Poppins", sans-serif; /* Or your preferred font */
+  margin-right: 12.5rem;
+}
+
+/* Left Panel */
+.left-section {
+  margin-right: 2rem;
+  flex: 0 0 auto; /* Keep width auto for the left section */
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #12406f;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 240px; /* Limit width if desired */
+}
+
+/* Vertical Divider */
+.divider {
+  width: 1.5px;
+  height: 120px; /* Adjust as needed */
+  background-color: #ccc;
+  margin-right: 2rem;
+}
+
+/* Right Panel: list of exams */
+.exams-list {
+  display: flex;
+  gap: 7rem; /* Space between each exam item */
+}
+
+/* Single Exam Item */
+.exam-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  /* You can use text-align: left or center, depending on desired layout */
+}
+
+.exam-icon {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+}
+
+.exam-details h3 {
+  color: #12406f;
+  margin: 0 0 0.2rem;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.exam-details p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}

@@ -1,0 +1,28 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* If you want a specific background color or pattern, do it here */
+}
+
+/* Banner container - NO width: 100vw here. */
+.banner {
+  max-width: 100vw;
+  width: 100%;
+  flex: 1;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  padding: 0 2rem;
+}
