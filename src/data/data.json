@@ -57,6 +57,48 @@
       "cta": "Know More",
       "ctaicon": "/svgs/cardicon.svg",
       "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
+    },
+    {
+      "header": "Lorem ipsum",
+      "subheader": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "cta": "Know More",
+      "ctaicon": "/svgs/cardicon.svg",
+      "bg": "/svgs/cardbg.svg"
     }
   ]
 }
