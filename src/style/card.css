@@ -1,47 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Poppins:wght@300;400;600;700&display=swap");
 
 .cardcontainer {
   position: relative;
-  min-width: 26rem; /* default card width */
-  height: 15rem;
+  /* Desktop: each card is 26rem wide (set in cardslider.css) */
+  /* height: 15rem; already in cardslider.css */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 10rem;
-  border-radius: 20px;
+  margin-bottom: 10rem; /* ~160px bottom margin */
+  border-radius: 1.25rem; /* 20px => 1.25rem */
   background-image: url("/svgs/cardbg.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1200px) {
-  .cardcontainer {
-    min-width: 20rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .cardcontainer {
-    min-width: 16rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .cardcontainer {
-    min-width: 14rem;
-  }
-}
+/* 
+  Comment out or remove older breakpoints that override widths, e.g.:
+  @media (max-width: 1200px) { .cardcontainer { min-width: 20rem; } }
+  @media (max-width: 768px)  { .cardcontainer { min-width: 16rem; } }
+  @media (max-width: 480px)  { .cardcontainer { min-width: 14rem; } }
+*/
 
 /* Card text/content */
 .info {
   display: flex;
   flex-direction: column;
   color: #fff;
-  margin-left: 1.5rem;
-  gap: 1.5rem;
+  margin-left: 1.5rem; /* ~24px */
+  gap: 1.5rem; /* ~24px */
   font-family: "Poppins", sans-serif;
+}
+
+.cardheader {
+  font-weight: 500;
+  font-size: 1.25rem; /* ~20px */
+}
+
+.cardsubheader {
+  padding-right: 5rem; /* ~80px => 5rem */
+  font-weight: 400;
+  font-size: 0.9375rem; /* 15px => 0.9375rem */
 }
 
 .cardimg {
@@ -49,20 +48,9 @@
   text-decoration: none;
 }
 
-.cardheader {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.cardsubheader {
-  padding-right: 5rem;
-  font-weight: 400;
-  font-size: 15px;
-}
-
 .cardicon {
   position: relative;
-  height: 1.5rem;
-  top: 6px;
-  left: 13px;
+  height: 1.5rem; /* ~24px => 1.5rem */
+  top: 0.375rem; /* ~6px => 0.375rem */
+  left: 0.8125rem; /* ~13px => 0.8125rem */
 }

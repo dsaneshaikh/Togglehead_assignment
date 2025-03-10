@@ -1,78 +1,182 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap");
 
-/* @font-face {
-  font-family: "Fs Albert";
-  src: url("/fonts/FSAlbert-Regular.woff2") format("woff2"),
-    url("/fonts/FSAlbert-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
+/* 
+   1rem typically = 16px
+   90px height -> 90 / 16 = 5.625rem
+   738px breakpoint -> 738 / 16 = 46.125rem
+   480px breakpoint -> 480 / 16 = 30rem
+*/
 
-@font-face {
-  font-family: "Fs Albert";
-  src: url("/fonts/FSAlbert-Bold.woff2") format("woff2"),
-    url("/fonts/FSAlbert-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Fs Albert";
-  src: url("/fonts/FSAlbert-Regular.woff2") format("woff2"),
-    url("/fonts/FSAlbert-Regular.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-} */
-
+/* Base Header Styles */
 .container {
   display: flex;
-  height: 72px;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  font-family: "Poppins";
   background-color: #12406f;
-  color: #ffffff;
-}
-
-.nav {
-  display: flex;
-  margin-right: 6rem;
-}
-
-.links a img {
-  margin-left: 3px;
-}
-
-.links a {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 400;
-  color: #ffffff;
-  padding: 0 1rem 0 1rem;
-}
-
-.links {
-  margin-right: 1rem;
-}
-
-.searchicon {
-  position: relative;
-  top: 3px;
-  height: 18px;
+  color: #fff;
+  padding: 0 2rem; /* 2rem = 32px horizontally */
+  height: 5.625rem; /* 90px => 5.625rem */
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  position: relative; /* allows absolute positioning of the hamburger */
 }
 
 .logo {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  font-size: 25px;
-  margin-left: 6rem;
+  font-size: 1.5625rem; /* 25px => 1.5625rem */
 }
 
-.enroll a {
-  border-radius: 10px;
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.links {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem; /* ~16px */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  padding: 11px 22px;
-  background-color: #ffffff;
+  font-size: 0.9375rem; /* 15px => 0.9375rem */
+  font-weight: 400;
+  color: #fff;
+  padding: 0 1rem; /* 16px horizontally */
+}
+
+.links a img {
+  margin-left: 0.1875rem; /* 3px => 0.1875rem */
+}
+
+/* Search Icon */
+.searchicon {
+  height: 1.125rem; /* 18px => 1.125rem */
+  margin-left: 0.1875rem;
+}
+
+/* Enroll Button */
+.enroll a {
+  border-radius: 0.625rem; /* 10px => 0.625rem */
+  text-decoration: none;
+  padding: 0.6875rem 1.375rem; /* 11px x 22px => ~0.6875rem x 1.375rem */
+  background-color: #fff;
   color: #12406f;
   font-weight: 600;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger .bar {
+  width: 1.5625rem; /* 25px => 1.5625rem */
+  height: 0.1875rem; /* 3px => 0.1875rem */
+  background-color: #fff;
+  margin: 0.25rem 0; /* 4px => 0.25rem */
+  transition: 0.4s;
+}
+
+/* Hamburger active -> transforms into an X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(0.375rem, 0.125rem);
+  /* was 6px => 0.375rem, 2px => 0.125rem */
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.8125rem, -0.625rem);
+  /* was 13px => 0.8125rem, 10px => 0.625rem */
+}
+
+/* Responsive for screens below 46.125rem (~738px) */
+@media (max-width: 46.125rem) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Center the logo in mobile */
+  .logo {
+    margin: 0 auto 0.5rem;
+    text-align: center;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hide the links and enroll button by default on mobile */
+  .links,
+  .enroll {
+    display: none;
+  }
+
+  /* Show hamburger on mobile - place it top-right */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 1rem; /* ~16px from top */
+    right: 1.5rem; /* ~24px from right */
+  }
+
+  /* Mobile nav: slide in from left, full width, ~40% height */
+  .links {
+    display: flex; /* ensure rendered for transition */
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    background-color: #12406f;
+    position: absolute;
+    top: 5rem; /* positions nav below logo/hamburger */
+    left: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 9;
+  }
+
+  .links.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+
+/* Additional Mobile styles (below 30rem ~ 480px) */
+@media (max-width: 30rem) {
+  .container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .links a {
+    font-size: 1.25rem; /* ~20px for bigger tap targets */
+    padding: 1rem 0.3rem;
+  }
+
+  .enroll a {
+    padding: 0.375rem 0.75rem; /* 6px x 12px */
+    font-size: 0.8125rem; /* 13px => 0.8125rem */
+  }
+
+  .searchicon {
+    height: 2rem; /* 32px => 2rem */
+  }
 }

@@ -1,24 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Base Styles for Subscribe Section */
 .subscribe-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 7rem;
-  background-color: #fff; /* or a light background color if needed */
-  gap: 4rem; /* space between columns */
-  font-family: "Poppins", sans-serif; /* or your preferred font */
+  padding: 2rem 7rem; /* 2rem vertical, 7rem horizontal */
+  background-color: #fff;
+  gap: 4rem;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Left column */
+/* Left Column */
 .subscribe-left {
   flex: 2;
-  max-width: 590px; /* prevents text from spanning too wide */
+  max-width: 36.875rem; /* 590px / 16 = 36.875rem */
 }
 
 .subscribe-title {
   font-size: 2rem;
-  color: #12406f; /* brand color or your choice */
+  color: #12406f;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -29,55 +30,141 @@
   line-height: 1.4;
 }
 
-/* Subscription form */
+/* Subscription Form */
 .subscribe-form {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 100%; /* allows the form to stretch across the parent container */
+  width: 100%;
 }
 
 .subscribe-input {
-  flex: 3; /* bigger ratio means more space than the button */
+  flex: 3;
   padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 0.0625rem solid #ccc; /* 1px */
+  border-radius: 0.25rem; /* 4px */
   font-size: 1rem;
 }
 
 .subscribe-button {
-  flex: 1; /* smaller ratio than the input */
+  flex: 1;
   background-color: #12406f;
   color: #fff;
   border: none;
   padding: 1.1rem 1.5rem;
-  border-radius: 17px;
+  border-radius: 1.0625rem; /* 17px */
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
-  transition: background-color 0.2s ease;
-  display: inline-flex; /* Use flexbox to align text and icon */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   transition: background-color 0.2s ease;
 }
 
 .subscribe-button img {
-  margin-left: 0.5rem; /* spacing between text and icon */
+  margin-left: 0.5rem;
 }
 
 .subscribe-button:hover {
-  background-color: #0d3050; /* slightly darker on hover */
+  background-color: #0d3050;
 }
 
-/* Right column */
+/* Right Column */
 .subscribe-right {
   flex: 1;
-  text-align: right; /* or center if you prefer */
+  text-align: right;
 }
 
 .subscribe-image {
   max-width: 74%;
   height: auto;
+}
+
+/* ---------------------------- */
+/* Media Queries (px breakpoints) */
+/* ---------------------------- */
+
+/* Tablet: below 992px */
+@media (max-width: 992px) {
+  .subscribe-section {
+    padding: 2rem 4rem;
+    gap: 3rem;
+  }
+
+  .subscribe-left {
+    max-width: 32rem;
+  }
+
+  .subscribe-right {
+    text-align: center;
+  }
+
+  .subscribe-image {
+    max-width: 80%;
+  }
+}
+
+/* Mobile: below 768px */
+@media (max-width: 768px) {
+  .subscribe-section {
+    flex-direction: column;
+    padding: 2rem 2rem;
+    gap: 2rem;
+  }
+
+  .subscribe-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-right {
+    text-align: center;
+  }
+
+  .subscribe-image {
+    max-width: 90%;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .subscribe-input,
+  .subscribe-button {
+    width: 100%;
+  }
+}
+
+/* Small Mobile: below 480px */
+@media (max-width: 480px) {
+  .subscribe-section {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .subscribe-title {
+    font-size: 1.75rem;
+  }
+
+  .subscribe-description {
+    font-size: 0.875rem;
+  }
+
+  .subscribe-input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .subscribe-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+  }
+
+  .subscribe-image {
+    max-width: 100%;
+  }
 }

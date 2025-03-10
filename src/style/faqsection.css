@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 5rem;
+  margin: 0 5rem; /* 5rem = 80px (if 1rem = 16px) */
   min-height: 22rem;
-  max-width: 100%; /* adjust to fit your layout */
+  max-width: 100%;
   padding: 2rem;
   font-family: "Poppins", sans-serif;
-  color: #12406f; /* brand color or match your design */
+  color: #12406f;
 }
 
 /* Main FAQ title */
@@ -31,34 +31,34 @@
   padding: 1rem 0;
 }
 
-/* Question row: text + icon on the right */
+/* Question row: text and icon on the right */
 .faq-question {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer; /* indicates clickability */
-  border-bottom: 1px solid #ddd; /* divider between items */
-  padding-bottom: 2rem; /* adjust this value as needed */
+  cursor: pointer;
+  border-bottom: 0.0625rem solid #ddd; /* 1px */
+  padding-bottom: 2rem;
 }
 
 /* Question text styling */
 .question-text {
   font-size: 1rem;
-  font-weight: 500; /* slightly bold */
+  font-weight: 500;
   margin-right: 1rem;
   line-height: 1.4;
 }
 
 /* Icon wrapper for plus/minus icon */
 .icon-wrapper {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Answer text shown when the accordion is open */
+/* Answer text styling */
 .faq-answer {
   margin: 3rem 0;
   color: #525252;
@@ -66,6 +66,62 @@
   line-height: 1.5;
 }
 
+/* FAQ icon size */
 .faqicon {
   height: 2rem;
+}
+
+/* ----------------------------------------- */
+/* Responsive Styles (Media Queries in px)   */
+/* ----------------------------------------- */
+
+/* Tablet: below 992px */
+@media (max-width: 992px) {
+  .faq-container {
+    margin: 0 2rem;
+    padding: 1.5rem;
+  }
+  .faq-title {
+    font-size: 1.6rem;
+  }
+  .question-text {
+    font-size: 0.95rem;
+  }
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile: below 768px */
+@media (max-width: 768px) {
+  .faq-container {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .faq-title {
+    font-size: 1.5rem;
+  }
+  .question-text {
+    font-size: 0.875rem;
+  }
+  .faq-answer {
+    font-size: 0.875rem;
+  }
+}
+
+/* Small Mobile: below 480px */
+@media (max-width: 480px) {
+  .faq-container {
+    margin: 0 0.5rem;
+    padding: 0.75rem;
+  }
+  .faq-title {
+    font-size: 1.3rem;
+  }
+  .question-text {
+    font-size: 0.8125rem;
+  }
+  .faq-answer {
+    font-size: 0.75rem;
+  }
 }

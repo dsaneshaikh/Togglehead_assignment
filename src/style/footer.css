@@ -8,7 +8,7 @@
   color: #fff;
   font-family: "Poppins", sans-serif;
   position: relative;
-  font-size: 1.1rem; /* Base font size increased */
+  font-size: 1.1rem; /* Base font size */
 }
 
 /* Top Section (3 columns) */
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  padding: 4.5rem 4rem;
+  padding: 2rem 4rem;
 }
 
 /* Each column in the top section */
@@ -34,7 +34,7 @@
   line-height: 1.4;
   margin-bottom: 0.5rem;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px converted to rem (15/16) */
 }
 
 /* Head Office Column List Styling */
@@ -47,8 +47,8 @@
 .footer-col.head-office li {
   display: flex;
   align-items: flex-start;
-  gap: 1rem; /* increased gap between the icon and text */
-  margin-bottom: 1rem; /* increased vertical gap between list items */
+  gap: 1rem; /* Gap between the icon and text */
+  margin-bottom: 1rem; /* Vertical gap between list items */
   line-height: 1.4;
   font-weight: 300;
   font-size: 0.95rem;
@@ -56,37 +56,37 @@
 
 /* Marker Icon in Head Office List Items */
 .marker-icon {
-  width: 24px; /* increased icon width */
-  height: 24px; /* increased icon height */
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
   flex-shrink: 0;
-  margin-top: 2px; /* adjust for vertical centering */
+  margin-top: 0.125rem; /* 2px */
 }
 
 /* Social Icons in Follow Us Column */
 .social-icons {
   display: flex;
-  gap: 2rem; /* increased gap between icons */
+  gap: 2rem;
   align-items: center;
   margin-top: 1rem;
 }
 
 .social-icons img {
-  width: 32px; /* increased icon size */
-  height: 32px;
+  width: 2rem; /* 32px */
+  height: 2rem; /* 32px */
   cursor: pointer;
 }
 
 /* Follow Us Column Overrides */
 .footer-col.follow-us-col {
-  display: flex; /* Make this column a flex container */
-  flex-direction: column; /* Stack heading + icons vertically */
-  align-items: center; /* Center them horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .footer-col.follow-us-col h3 {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem; /* increased Follow us text size */
+  font-size: 1.5rem;
 }
 
 /* Bottom Section */
@@ -105,4 +105,45 @@
   text-decoration: underline;
   cursor: pointer;
   font-weight: 400;
+}
+
+/* ------------------------- */
+/* Responsive Media Queries  */
+/* ------------------------- */
+
+/* Tablet: below 992px */
+@media (max-width: 992px) {
+  .footer-top {
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile: below 768px */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+  .footer-col {
+    text-align: center;
+  }
+}
+
+/* Small Mobile: below 480px */
+@media (max-width: 480px) {
+  .footer-top {
+    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+  }
+  .footer-col h3 {
+    font-size: 1.25rem;
+  }
+  .footer-col p,
+  .footer-col.head-office li,
+  .footer-col.follow-us-col h3 {
+    font-size: 0.875rem;
+  }
 }

@@ -4,13 +4,13 @@ import "../style/carousel.css";
 function Carousel({ data }) {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Uncomment if you want auto-sliding
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setActiveSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-  //   }, 2000);
-  //   return () => clearInterval(intervalId);
-  // }, [data.length]);
+  useEffect(() => {
+    const autoslide = setInterval(() => {
+      setActiveSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => {};
+  }, []);
 
   return (
     <div className="carousel-container">
@@ -19,7 +19,13 @@ function Carousel({ data }) {
         style={{ transform: `translateX(-${activeSlide * 100}%)` }}
       >
         {data.map((slide, index) => (
-          <div key={index} className="carousel-slide">
+          <div
+            key={index}
+            className="carousel-slide"
+            style={{
+              backgroundImage: `url(${slide.img})`,
+            }}
+          >
             <div className="leftsection">
               <h1 className="header">{slide.header}</h1>
               <p className="subheader">{slide.subheader}</p>
@@ -35,11 +41,12 @@ function Carousel({ data }) {
               </div>
             </div>
             <div className="rightsection">
-              <img src={slide.img} alt="" />
+              <img src={slide.img} alt="Carousel Slide" />
             </div>
           </div>
         ))}
       </div>
+
       <span className="indicators">
         {data.map((_, idx) => (
           <button
