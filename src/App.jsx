@@ -7,7 +7,7 @@ import InfoSection from "./Components/InfoSection";
 import Card from "./Components/Card";
 import CardSlider from "./Components/CardSlider";
 import StatsSection from "./Components/StatsSection";
-import FAQSection from "./Components/FaqSection";
+import FAQSection from "./Components/FAQSection";
 import SubscribeSection from "./Components/SubscribeSection";
 import Footer from "./Components/Footer";
 
