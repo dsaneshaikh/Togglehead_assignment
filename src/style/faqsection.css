@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Container for the entire FAQ section */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5rem;
+  height: 20rem;
+  max-width: 100%; /* adjust to fit your layout */
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #12406f; /* brand color or match your design */
+}
+
+/* Main FAQ title */
+.faq-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* FAQ items wrapper */
+.faq-list {
+  width: 100%;
+}
+
+/* Single FAQ item */
+.faq-item {
+  padding: 1rem 0;
+}
+
+/* Question row: text + icon on the right */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer; /* indicates clickability */
+  border-bottom: 1px solid #ddd; /* divider between items */
+  padding-bottom: 2rem; /* adjust this value as needed */
+}
+
+/* Question text styling */
+.question-text {
+  font-size: 1rem;
+  font-weight: 500; /* slightly bold */
+  margin-right: 1rem;
+  line-height: 1.4;
+}
+
+/* Icon wrapper for plus/minus icon */
+.icon-wrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Answer text shown when the accordion is open */
+.faq-answer {
+  margin: 3rem 0;
+  color: #525252;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.faqicon {
+  height: 2rem;
+}

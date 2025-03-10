@@ -12,53 +12,6 @@
   min-height: 100vh;
 }
 
-/* Slider Section Wrapper */
-.slider-section {
-  position: relative;
-  width: 100%;
-  margin: 2rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Left/Right Buttons */
-.slider-btn {
-  background-color: #12406f;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-  z-index: 2;
-}
-
-.slider-btn:hover {
-  opacity: 1;
-}
-
-.left-btn {
-  margin-right: 1rem;
-}
-
-.right-btn {
-  margin-left: 1rem;
-}
-
-/* Cards container */
-.cards {
-  display: flex;
-  gap: 2rem;
-  padding: 1rem 0;
-  width: 90%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
 /* Optional: Hide scrollbar for WebKit browsers */
 .cards::-webkit-scrollbar {
   display: none;
