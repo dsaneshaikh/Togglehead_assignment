@@ -8,6 +8,8 @@ import Card from "./Components/Card";
 import CardSlider from "./Components/CardSlider";
 import StatsSection from "./Components/StatsSection";
 import FAQSection from "./Components/FaqSection";
+import SubscribeSection from "./Components/SubscribeSection";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <CardSlider />
       <StatsSection />
       <FAQSection />
+      <SubscribeSection />
+      <Footer />
     </div>
   );
 }

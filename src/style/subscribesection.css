@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.subscribe-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7rem;
+  background-color: #fff; /* or a light background color if needed */
+  gap: 4rem; /* space between columns */
+  font-family: "Poppins", sans-serif; /* or your preferred font */
+}
+
+/* Left column */
+.subscribe-left {
+  flex: 2;
+  max-width: 590px; /* prevents text from spanning too wide */
+}
+
+.subscribe-title {
+  font-size: 2rem;
+  color: #12406f; /* brand color or your choice */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.subscribe-description {
+  color: #525252;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Subscription form */
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%; /* allows the form to stretch across the parent container */
+}
+
+.subscribe-input {
+  flex: 3; /* bigger ratio means more space than the button */
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  flex: 1; /* smaller ratio than the input */
+  background-color: #12406f;
+  color: #fff;
+  border: none;
+  padding: 1.1rem 1.5rem;
+  border-radius: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  display: inline-flex; /* Use flexbox to align text and icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-button img {
+  margin-left: 0.5rem; /* spacing between text and icon */
+}
+
+.subscribe-button:hover {
+  background-color: #0d3050; /* slightly darker on hover */
+}
+
+/* Right column */
+.subscribe-right {
+  flex: 1;
+  text-align: right; /* or center if you prefer */
+}
+
+.subscribe-image {
+  max-width: 74%;
+  height: auto;
+}
