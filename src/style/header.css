@@ -1,30 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap");
 
-/* 
-   1rem typically = 16px
-   90px height -> 90 / 16 = 5.625rem
-   738px breakpoint -> 738 / 16 = 46.125rem
-   480px breakpoint -> 480 / 16 = 30rem
-*/
-
-/* Base Header Styles */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #12406f;
   color: #fff;
-  padding: 0 2rem; /* 2rem = 32px horizontally */
-  height: 5.625rem; /* 90px => 5.625rem */
+  padding: 0 2rem;
+  height: 5.625rem;
   font-family: "Poppins", sans-serif;
   width: 100%;
-  position: relative; /* allows absolute positioning of the hamburger */
+  position: relative;
 }
 
 .logo {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  font-size: 1.5625rem; /* 25px => 1.5625rem */
+  font-size: 1.5625rem;
 }
 
 .nav {
@@ -32,11 +24,10 @@
   align-items: center;
 }
 
-/* Navigation Links */
 .links {
   display: flex;
   align-items: center;
-  margin-right: 1rem; /* ~16px */
+  margin-right: 1rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -44,33 +35,30 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 0.9375rem; /* 15px => 0.9375rem */
+  font-size: 0.9375rem;
   font-weight: 400;
   color: #fff;
-  padding: 0 1rem; /* 16px horizontally */
+  padding: 0 1rem;
 }
 
-.links a img {
-  margin-left: 0.1875rem; /* 3px => 0.1875rem */
-}
-
-/* Search Icon */
+.links a img,
 .searchicon {
-  height: 1.125rem; /* 18px => 1.125rem */
   margin-left: 0.1875rem;
 }
 
-/* Enroll Button */
+.searchicon {
+  height: 1.125rem;
+}
+
 .enroll a {
-  border-radius: 0.625rem; /* 10px => 0.625rem */
+  border-radius: 0.625rem;
   text-decoration: none;
-  padding: 0.6875rem 1.375rem; /* 11px x 22px => ~0.6875rem x 1.375rem */
+  padding: 0.6875rem 1.375rem;
   background-color: #fff;
   color: #12406f;
   font-weight: 600;
 }
 
-/* Hamburger Menu Icon */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -79,27 +67,25 @@
 }
 
 .hamburger .bar {
-  width: 1.5625rem; /* 25px => 1.5625rem */
-  height: 0.1875rem; /* 3px => 0.1875rem */
+  width: 1.5625rem;
+  height: 0.1875rem;
   background-color: #fff;
-  margin: 0.25rem 0; /* 4px => 0.25rem */
+  margin: 0.25rem 0;
   transition: 0.4s;
 }
 
-/* Hamburger active -> transforms into an X */
 .hamburger.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(0.375rem, 0.125rem);
-  /* was 6px => 0.375rem, 2px => 0.125rem */
 }
+
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(0.8125rem, -0.625rem);
-  /* was 13px => 0.8125rem, 10px => 0.625rem */
 }
 
-/* Responsive for screens below 46.125rem (~738px) */
 @media (max-width: 46.125rem) {
   .container {
     flex-direction: column;
@@ -107,7 +93,6 @@
     padding: 1rem 1.5rem;
   }
 
-  /* Center the logo in mobile */
   .logo {
     margin: 0 auto 0.5rem;
     text-align: center;
@@ -118,29 +103,26 @@
     justify-content: center;
   }
 
-  /* Hide the links and enroll button by default on mobile */
   .links,
   .enroll {
     display: none;
   }
 
-  /* Show hamburger on mobile - place it top-right */
   .hamburger {
     display: flex;
     position: absolute;
-    top: 1rem; /* ~16px from top */
-    right: 1.5rem; /* ~24px from right */
+    top: 1rem;
+    right: 1.5rem;
   }
 
-  /* Mobile nav: slide in from left, full width, ~40% height */
   .links {
-    display: flex; /* ensure rendered for transition */
+    display: flex;
     flex-direction: column;
     width: 100%;
     height: 40vh;
     background-color: #12406f;
     position: absolute;
-    top: 5rem; /* positions nav below logo/hamburger */
+    top: 5rem;
     left: 0;
     opacity: 0;
     transform: translateX(-100%);
@@ -156,7 +138,6 @@
   }
 }
 
-/* Additional Mobile styles (below 30rem ~ 480px) */
 @media (max-width: 30rem) {
   .container {
     padding: 0.5rem 1rem;
@@ -167,16 +148,16 @@
   }
 
   .links a {
-    font-size: 1.25rem; /* ~20px for bigger tap targets */
+    font-size: 1.25rem;
     padding: 1rem 0.3rem;
   }
 
   .enroll a {
-    padding: 0.375rem 0.75rem; /* 6px x 12px */
-    font-size: 0.8125rem; /* 13px => 0.8125rem */
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .searchicon {
-    height: 2rem; /* 32px => 2rem */
+    height: 2rem;
   }
 }

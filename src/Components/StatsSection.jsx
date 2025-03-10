@@ -2,7 +2,6 @@ import React from "react";
 import "../style/statssection.css";
 
 function StatsSection() {
-  // Example data for the four columns
   const statsData = [
     {
       smallTitle: "Lorem ipsum",

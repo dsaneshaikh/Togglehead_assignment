@@ -1,23 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Poppins:wght@300;400;600;700&display=swap");
 
-/* Slider Section Wrapper */
 .slider-section {
   position: relative;
   width: 100%;
-  height: 17rem; /* ~272px if 1rem = 16px */
-  margin: 2rem auto; /* 2rem vertical margin, auto horizontal */
+  height: 17rem;
+  margin: 2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Cards container */
 .cards {
   display: flex;
-  gap: 2rem; /* Gap between cards on desktop */
+  gap: 2rem;
   padding: 1rem 0;
   width: 90%;
-  height: 18rem; /* ~288px */
+  height: 18rem;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -25,52 +23,51 @@
   scroll-snap-type: x mandatory;
 }
 
-/* Card container (base) */
 .cardcontainer {
-  width: 26rem; /* Force each card to exactly 26rem wide on desktop */
-  height: 15rem; /* ~240px */
+  width: 26rem;
+  height: 15rem;
   flex-shrink: 0;
   scroll-snap-align: center;
 }
 
-/* Left/Right Buttons */
 .slider-btn {
   background-color: #12406f;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 2rem; /* ~32px icon size */
-  width: 3rem; /* ~48px button width */
-  height: 3rem; /* ~48px button height */
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   opacity: 0.7;
   transition: opacity 0.3s;
   z-index: 2;
 }
+
 .slider-btn:hover {
   opacity: 1;
 }
+
 .left-btn {
-  margin-right: 1rem; /* ~16px */
-}
-.right-btn {
-  margin-left: 1rem; /* ~16px */
+  margin-right: 1rem;
 }
 
-/* Draggable state styling (optional) */
+.right-btn {
+  margin-left: 1rem;
+}
+
 .cards.active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
 }
 
-/* Mobile: up to 738px => One card per screen */
 @media (max-width: 738px) {
   .cards {
-    gap: 0 !important; /* Remove gap so one card fully fits */
+    gap: 0 !important;
     justify-content: center;
   }
   .cardcontainer {
-    width: 100% !important; /* Force single card to fill container */
-    max-width: 100% !important; /* Prevent it from exceeding container */
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }

@@ -4,7 +4,6 @@ import "../style/faqsection.css";
 function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // Sample FAQ data (customize as needed)
   const faqs = [
     {
       question: "How does an investor gain access to MF Utility?",
@@ -25,7 +24,6 @@ function FAQSection() {
   ];
 
   const toggleFAQ = (index) => {
-    // Close if the same FAQ is clicked, otherwise open the new one
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
@@ -50,7 +48,6 @@ function FAQSection() {
                 {faq.question}
               </p>
               <div className="icon-wrapper">
-                {/* Inline SVG for plus/minus icon */}
                 {activeIndex === index ? (
                   /* Minus icon */
                   <img className="faqicon" src="/svgs/minus.svg" alt="" />
@@ -61,7 +58,7 @@ function FAQSection() {
               </div>
             </div>
 
-            {/* Answer (visible only if this FAQ is active) */}
+            {/* Answer  */}
             {activeIndex === index && (
               <div className="faq-answer">
                 <p>{faq.answer}</p>

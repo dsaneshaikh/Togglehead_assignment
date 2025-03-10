@@ -4,7 +4,6 @@ import "../style/footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      {/* Top Section: 3 columns */}
       <div className="footer-top">
         {/* Contact Us Column */}
         <div className="footer-col">

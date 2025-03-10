@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* Base Styles for Subscribe Section */
 .subscribe-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 7rem; /* 2rem vertical, 7rem horizontal */
+  padding: 2rem 7rem;
   background-color: #fff;
   gap: 4rem;
   font-family: "Poppins", sans-serif;
 }
 
-/* Left Column */
 .subscribe-left {
   flex: 2;
-  max-width: 36.875rem; /* 590px / 16 = 36.875rem */
+  max-width: 36.875rem;
 }
 
 .subscribe-title {
@@ -30,7 +28,6 @@
   line-height: 1.4;
 }
 
-/* Subscription Form */
 .subscribe-form {
   display: flex;
   align-items: center;
@@ -41,8 +38,8 @@
 .subscribe-input {
   flex: 3;
   padding: 0.75rem 1rem;
-  border: 0.0625rem solid #ccc; /* 1px */
-  border-radius: 0.25rem; /* 4px */
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 1rem;
 }
 
@@ -52,7 +49,7 @@
   color: #fff;
   border: none;
   padding: 1.1rem 1.5rem;
-  border-radius: 1.0625rem; /* 17px */
+  border-radius: 17px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
@@ -71,7 +68,6 @@
   background-color: #0d3050;
 }
 
-/* Right Column */
 .subscribe-right {
   flex: 1;
   text-align: right;
@@ -82,88 +78,68 @@
   height: auto;
 }
 
-/* ---------------------------- */
-/* Media Queries (px breakpoints) */
-/* ---------------------------- */
-
-/* Tablet: below 992px */
 @media (max-width: 992px) {
   .subscribe-section {
     padding: 2rem 4rem;
     gap: 3rem;
   }
-
   .subscribe-left {
     max-width: 32rem;
   }
-
   .subscribe-right {
     text-align: center;
   }
-
   .subscribe-image {
     max-width: 80%;
   }
 }
 
-/* Mobile: below 768px */
 @media (max-width: 768px) {
   .subscribe-section {
     flex-direction: column;
     padding: 2rem 2rem;
     gap: 2rem;
   }
-
   .subscribe-left {
     max-width: 100%;
     text-align: center;
   }
-
   .subscribe-right {
     text-align: center;
   }
-
   .subscribe-image {
     max-width: 90%;
   }
-
   .subscribe-form {
     flex-direction: column;
     gap: 1rem;
   }
-
   .subscribe-input,
   .subscribe-button {
     width: 100%;
   }
 }
 
-/* Small Mobile: below 480px */
 @media (max-width: 480px) {
   .subscribe-section {
     padding: 1.5rem 1rem;
     gap: 1.5rem;
   }
-
   .subscribe-title {
     font-size: 1.75rem;
   }
-
   .subscribe-description {
     font-size: 0.875rem;
   }
-
   .subscribe-input {
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
   }
-
   .subscribe-button {
     padding: 0.75rem 1rem;
     font-size: 0.875rem;
     border-radius: 0.75rem;
   }
-
   .subscribe-image {
     max-width: 100%;
   }

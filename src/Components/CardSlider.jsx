@@ -9,7 +9,6 @@ function CardSlider() {
   const startX = useRef(0);
   const scrollLeftRef = useRef(0);
 
-  // Button functions for scrolling a full container width
   const scrollLeft = () => {
     if (cardsRef.current) {
       const containerWidth = cardsRef.current.clientWidth;
@@ -24,7 +23,6 @@ function CardSlider() {
     }
   };
 
-  // Mouse event handlers for dragging
   const handleMouseDown = (e) => {
     isDown.current = true;
     cardsRef.current.classList.add("active");
@@ -46,11 +44,10 @@ function CardSlider() {
     if (!isDown.current) return;
     e.preventDefault();
     const x = e.pageX - cardsRef.current.offsetLeft;
-    const walk = (x - startX.current) * 2; // Adjust multiplier for sensitivity
+    const walk = (x - startX.current) * 2;
     cardsRef.current.scrollLeft = scrollLeftRef.current - walk;
   };
 
-  // Touch event handlers for mobile dragging
   const handleTouchStart = (e) => {
     isDown.current = true;
     startX.current = e.touches[0].pageX - cardsRef.current.offsetLeft;
